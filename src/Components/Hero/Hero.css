@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+/* cyrillic */
+@font-face {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/russoone/v16/Z9XUDmZRWg6M1LvRYsHOy8mJrrg.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/russoone/v16/Z9XUDmZRWg6M1LvRYsHOwcmJrrg.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/russoone/v16/Z9XUDmZRWg6M1LvRYsHOz8mJ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+
+
+:root {
+    --tj-theme-primary:  #8750f7; /* Example color */
+    --tj-white: #ffffff;
+}
+
+.hero{
+    background-image: linear-gradient(to right, var(--tj-theme-primary) 0%, var(--tj-white) 100%);
+    background-clip: inherit;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-size: 5rem;
+line-height: 5rem;
+font-family: "Sora", sans-serif;
+font-weight: bold;
+box-sizing: border-box;
+cursor: pointer;
+}
+
+
+.svg-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    opacity: 0.2; 
+    text-align: center;
+    font-size: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  
+  }
+
+
+  .svg-background h1{
+    font-family: 'Russo One', sans-serif;
+  
+  }
+
+
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+     
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 2px white;
+      color:transparent;
+        opacity: 10;
+      
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+
+
+  
+
+  .svg-background h1 {
+    animation: zoomInOut 3s infinite;
+  }
+  
+
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.round{
+    background: transparent !important;
+    background-blend-mode:overlay;
+    border-radius: 20px;
+
+}
+
+.round:hover{
+   background: transparent !important;
+    transition: all 10s ease;
+    box-shadow: 0px 0px 200px rgb(68, 50, 108);
+    transform: scale(1.05) rotate(5deg) !important;
+
+}
+
+
+
+.hero-container::after, .hero-container::before{
+    content: ' ';
+    width : 28.125rem;
+    height: 28.125rem;
+    border-radius: 28.125rem;
+    background: #1c1a21;
+    position: absolute;
+    z-index: -1;
+    filter : blur(400px)
+
+}
+
+.hero-container::after{
+    top: -3rem;
+    left : -5rem;
+}
+
+.hero-container::before{
+    bottom: 2rem;
+    right: 0rem;
+}
+
+.hero-content {
+    flex : 2;
+}
+
+.hero-content h2 {
+    font-size : 1.8rem;
+    font-weight : 600;
+    line-height: 5rem;
+    margin-bottom : 1rem;
+    font-family: "Sora", sans-serif;
+}
+
+.hero-content p {
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem;
+    font-family: "Sora", sans-serif;
+ }
+
+.hero-img {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 5rem;
+}
+
+.hero-img > div {
+    display: flex;
+    align-items: flex-end;
+    gap : 0.8rem; 
+    background: transparent !important;
+}
+
+.tilt{
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 17rem !important;
+    height: 350px !important;
+   overflow: hidden;
+   border-radius: 2rem !important;
+}
+
+.hero-img > div > img {
+    width : 21rem;
+    height: 25rem;
+    transition: all 0.5s ease !important;
+    z-index: 1;
+    background: transparent !important;
+   
+}
+
+.tech-icon{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0.75rem;
+    border: 1.5px solid #4e4e57;
+}
+
+.flexcol{
+    display:flex;
+    flex-direction: column;
+    gap : 2rem;
+  
+}
+
+.tech-icon img{
+    width: 2.5rem;
+    height: auto;
+    transition: all 0.3s ease !important;
+    border-radius: 10px;
+    background: transparent !important;
+}
+
+
+
+.social-icons{
+    display:flex;
+   list-style: none;
+   font-size: 1.4rem;
+   align-items: center;
+   justify-content: start;
+  
+}
+
+
+.social-icons li{
+    margin: 3rem 1.5rem;
+    border: 2px solid rgb(238, 238, 238);
+    padding: 0px 10px;
+    border-radius: 10px;
+    font-size: 2rem;
+    transition : all 0.3s ease-in-out;
+}
+.social-icons li:hover{
+    transform: scale(1.3);
+}
+
+.social-icons li a{
+    color: white;
+}
+
+.fb2{
+    padding : 0px 2px;
+}
+
+.hero-img > div > img:hover{
+    transform: scale(1.2) rotate(10deg) translateY(-0.5rem) !important;
+    background: transparent !important;
+    position: relative;
+    top:40px;
+}
+
+.tech-icon img:hover{
+    transform: translateY(-0.5rem) !important;
+}
+
+body:has(.hero-img > div > img:hover) .tech-icon {
+    display:none;
+  }
+
+
+@media (max-width: 1025px){
+    .hero-content h2{
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+
+
+    .hero-content p {
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+
+    .hero-img > div > img {
+        width : 20rem;
+    }
+
+    .tech-icon {
+        width : 4rem;
+        height: 4rem;
+    }
+
+    .tech-icon img {
+        width: 2.5rem;
+    }
+}
+
+@media (max-width: 768px){
+
+    .social-icons{
+        align-items: center;
+        justify-content: center;
+    }
+
+.hero{
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+    
+    .hero-container{
+        flex-direction: column;
+    }
+
+    .hero-img{
+        margin: 2rem 0 2rem 0;
+    }
+
+    .hero-container h2 {
+        margin-top: 3rem;
+    }
+
+    .hero-content h2, .hero-content p {
+        width: auto;
+        text-align: center;
+    }
+
+    .hero-container::after, .hero-container::before{
+        content: ' ';
+        width : 18rem;
+        height: 18rem;
+        background: none;
+    }
+    .hero-container::after{
+        top: 0rem;
+        left: 0rem;
+    }
+
+    .hero-container::before{
+        bottom: 2rem;
+        right: 0rem;
+    }
+} 
+
+@media (max-width: 600px){
+    .social-icons{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-icons li{
+        margin: 3rem 0.5rem;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .svg-background{
+        display: none;
+    }
+
+    .hero{
+        font-size: 2.2rem;
+        line-height: 3rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2rem;
+        line-height: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+
+    .hero-img {
+        gap : 1rem;
+        
+    }
+
+    .hero-img > div {
+        gap : 1rem;
+    
+    } 
+
+
+  
+
+    .hero-img > div > img {
+        width : 20rem;
+        margin-right: 1rem;
+    }
+
+    .tech-icon {
+        display:none;
+       
+    }
+
+    .tech-icon img {
+        width: 2rem;
+       
+    }
+
+    .hero-container::after, .hero-container::before{
+        background: none;
+    }
+
+    .hero-img > div > img:hover, .tech-icon img:hover{
+        transform: scale(1) rotate(0deg)!important;
+    
+    }
+}

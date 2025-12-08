@@ -25,8 +25,6 @@
 
 
 .techtitle{
-    
-
   position: absolute;
   top: 50%; 
   left: 50%; 
@@ -40,6 +38,12 @@
   transition: opacity 0.16s ease, transform 0.10s ease-in-out; 
   text-align: center;
   pointer-events: none; 
+  text-decoration: none;
+}
+
+.techtitle p a {
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -63,10 +67,11 @@
 
 @media (max-width: 900px){
 
-    .techtitle h2{
+    .techtitle p{
         font-size: 0.8rem;
         font-weight: 700;
         padding: 0px;
+        text-decoration: none;
     }
 
     .techtitle ul{

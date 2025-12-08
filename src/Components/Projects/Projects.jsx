@@ -19,7 +19,7 @@ export default function Projects({section}) {
         <div className='project-content'>
 {
     PROJECTS.map((item,index) => (
-        <ProjectCard key={item.id}  id={item.id} icon={item.icon} title={item.title} />
+        <ProjectCard key={item.id}  id={item.id} icon={item.icon} title={item.title} link={item.link} />
     ))
 }
         </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import './ProjectCard.css'
 
 
-export default function ProjectCard({icon, title}) {
+export default function ProjectCard({icon, title, link}) {
 
 
   return (
@@ -11,7 +11,7 @@ export default function ProjectCard({icon, title}) {
         <div>
 <img src={icon} alt='photo'/>
 <div className='techtitle'>
-<h2>{title}</h2>
+<p><a href={link} target='_blank'>Visit</a></p>
 
 </div>
 

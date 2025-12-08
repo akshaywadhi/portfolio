@@ -107,11 +107,13 @@ export const PROJECTS = [
     {   id : 1,
         title : 'Employee Management System',
         icon : './assets/img/ems.webp',
+        link : 'https://emsfrontend-phi.vercel.app/'
        
     },
     {   id : 2,
-        title: 'Shopping Cart',
-        icon : './assets/img/shopping.webp',
+        title: 'Movie App',
+        icon : './assets/img/movie.webp',
+         link : 'https://github.com/akshaywadhi/movieapp.git'
  
     },
    

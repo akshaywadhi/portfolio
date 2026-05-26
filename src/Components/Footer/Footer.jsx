@@ -1,38 +1,27 @@
-import React from 'react'
-import './Footer.css'
+import "./Footer.css";
+import { PROFILE } from "../../utils/data";
 
 export default function Footer() {
+  const socialLinks = [
+    { icon: "fab fa-linkedin-in", href: PROFILE.linkedin, label: "LinkedIn" },
+    { icon: "fab fa-github", href: PROFILE.github, label: "GitHub" },
+    { icon: "fas fa-envelope", href: `mailto:${PROFILE.email}`, label: "Email" },
+  ];
+
   return (
-    <div className='footer'>
-      <div className='copy'>
-     <h3>Copyright &copy; akshaywadhi</h3> 
-      </div>
-    
-
-
-      <div className='links-container'>
-
-<div className='links'>
-  <li className='fb'>
-  <i className="fab fa-facebook-f" />
-  </li>
-  <li>
-  <i className="fab fa-linkedin-in" />
-  </li>
-  <li>
-  <i className="fa-brands fa-x-twitter" />
-  </li>
-  <li>
-  <i className="fab fa-github" />
-  </li>
-
-</div>
-
-<div className='langs'>
-<a href="https://getbootstrap.com/" target='_blank'>BOOTSTRAP</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank'>HTML</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript' target='_blank'>JAVASCRIPT</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/CSS' target='_blank'>CSS</a> | <a href='https://mui.com/' target='_blank'>MUI</a> | <a href='https://react.dev/' target='_blank'>REACT</a>
-</div>
-
-      </div>
-    </div>
-  )
+    <footer className="footer">
+      <p className="footer-copy">
+        © {new Date().getFullYear()} {PROFILE.name}. Built with React & Vite.
+      </p>
+      <ul className="footer-social">
+        {socialLinks.map(({ icon, href, label }) => (
+          <li key={label}>
+            <a href={href} target="_blank" rel="noreferrer" aria-label={label}>
+              <i className={icon} />
+            </a>
+          </li>
+        ))}
+      </ul>
+    </footer>
+  );
 }

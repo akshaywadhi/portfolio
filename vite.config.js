@@ -1,7 +1,19 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom"],
+          typewriter: ["typewriter-effect"],
+          forms: ["react-hook-form", "@web3forms/react"],
+        },
+      },
+    },
+    cssMinify: true,
+    sourcemap: false,
+  },
+});

@@ -1,130 +1,166 @@
-export const SKILLS = [{
-    title : 'FrontEnd',
-    icon : './assets/img/front-end.webp',
-    skills : [
-        {
-            skill : 'HTML5', percentage : '80%'
-        },
-        {
-            skill : 'CSS 3 (Sass/SCSS)', percentage : '70%'
-        },
-        {
-            skill : 'JavaScript', percentage : '60%'
-        },
-        {
-            skill : 'React.js', percentage : '60%'
-        },
+export const PROFILE = {
+  name: "Akshay Wadhi",
+  title: "Full Stack Developer",
+  location: "Wardha, Maharashtra",
+  phone: "+91 9766575145",
+  email: "akshaywadhi.dev@gmail.com",
+  linkedin: "https://www.linkedin.com/in/akshaywadhi/",
+  github: "https://github.com/akshaywadhi",
+  portfolio: "https://akshaywadhi.in/",
+  cvUrl:
+    "https://github.com/akshaywadhi/test/raw/main/AkshayWadhi.pdf",
+  summary:
+    "Full Stack Developer with hands-on experience building secure, scalable multi-tenant web applications, REST APIs, and role-based authentication systems. Developed a production-level Institute Management SaaS with multi-tenancy, RBAC, and analytics dashboards. Trained 150+ students in MERN stack development.",
+  typewriterRoles: [
+    "Full Stack Developer",
+    "MERN Stack Developer",
+    "SaaS Builder",
+  ],
+  availability: "Open to opportunities",
+  heroImage: "./assets/img/hero-akshay.webp",
+  avatar: "./assets/img/hero-akshay.webp",
+  initials: "AK",
+};
 
+export const STATS = [
+  { value: "2+", label: "Years Building", icon: "schedule" },
+  { value: "150+", label: "Students Mentored", icon: "groups" },
+  { value: "10+", label: "Modules Shipped", icon: "deployed_code" },
+  { value: "1", label: "Production SaaS", icon: "cloud_done" },
+];
+
+export const TECH_STACK = [
+  "React", "Node.js", "MongoDB", "TypeScript", "Express",
+  "JWT", "Mantine", "Recharts", "Redux", "Vite",
+  "REST APIs", "RBAC", "Multi-tenancy", "Git",
+];
+
+export const NAV_ITEMS = [
+  { label: "Home", key: "section4" },
+  { label: "About", key: "section6" },
+  { label: "Skills", key: "section1" },
+  { label: "Projects", key: "section5" },
+  { label: "Experience", key: "section2" },
+  { label: "Education", key: "section7" },
+  { label: "Contact", key: "section3" },
+];
+
+export const SKILLS = [
+  {
+    title: "Languages",
+    icon: "./assets/img/front-end.webp",
+    skills: [
+      { skill: "JavaScript", percentage: "90%" },
+      { skill: "TypeScript", percentage: "75%" },
+      { skill: "HTML/CSS", percentage: "90%" },
+      { skill: "SQL (MySQL)", percentage: "70%" },
     ],
-},
- 
-
-{
-    title : 'BackEnd',
-    icon : './assets/img/backend.webp',
-    skills : [
-        {
-            skill : 'Node.js', percentage : '70%'
-        },
-        {
-            skill : 'Express.js', percentage : '50%'
-        },
-       
-
+  },
+  {
+    title: "Frontend",
+    icon: "./assets/img/front-end.webp",
+    skills: [
+      { skill: "React.js", percentage: "90%" },
+      { skill: "Redux Toolkit", percentage: "80%" },
+      { skill: "React Router", percentage: "85%" },
+      { skill: "Mantine UI", percentage: "85%" },
+      { skill: "Recharts", percentage: "80%" },
+      { skill: "Vite", percentage: "85%" },
     ],
-},
-{
-    title : 'Tools',
-    icon : './assets/img/tools.webp',
-    skills : [
-        {
-            skill : 'Git & GitHub', percentage : '80%'
-        },
-        {
-            skill : 'Visual Studio Code', percentage : '50%'
-        },
-        {
-            skill : 'Webpack', percentage : '60%'
-        },
-        {
-            skill : 'Responsive Design', percentage : '60%'
-        },
-
+  },
+  {
+    title: "Backend",
+    icon: "./assets/img/backend.webp",
+    skills: [
+      { skill: "Node.js", percentage: "90%" },
+      { skill: "Express.js", percentage: "88%" },
+      { skill: "REST APIs", percentage: "90%" },
+      { skill: "JWT & bcrypt", percentage: "85%" },
+      { skill: "Multer & Nodemailer", percentage: "80%" },
     ],
-},
-
-{
-    title : 'Soft Skills',
-    icon : './assets/img/comm.webp',
-    skills : [
-        {
-            skill : 'Problem Solving', percentage : '80%'
-        },
-        {
-            skill : 'Collaboration', percentage : '85%'
-        },
-        {
-            skill : 'Attention To Detail', percentage : '90%'
-        },
-       
+  },
+  {
+    title: "Database & Tools",
+    icon: "./assets/img/tools.webp",
+    skills: [
+      { skill: "MongoDB & Mongoose", percentage: "88%" },
+      { skill: "Git & GitHub", percentage: "90%" },
+      { skill: "Postman & Axios", percentage: "85%" },
+      { skill: "ExcelJS & pdfmake", percentage: "80%" },
+      { skill: "VS Code", percentage: "90%" },
     ],
-},];
+  },
+  {
+    title: "Concepts",
+    icon: "./assets/img/comm.webp",
+    skills: [
+      { skill: "Multi-tenancy & RBAC", percentage: "90%" },
+      { skill: "CRUD APIs & File uploads", percentage: "88%" },
+      { skill: "Dashboard analytics", percentage: "85%" },
+      { skill: "Code review & Mentoring", percentage: "90%" },
+    ],
+  },
+];
 
 export const WORK_EXPERIENCE = [
-    {
-        title : 'Front-End Development',
-        date : 'October 2023',
-        responsibilities: [
-            'Building User Interfaces (UI): I began developing user interfaces after learning HTML and CSS. Subsequently, I delved deeper into the field by learning React.',
-            'Implementing Responsive Design: Ensuring that websites and applications are optimized for various devices and screen sizes, allowing for a seamless user experience across desktops, tablets, and mobile devices. Using CSS Grid, I developed several small projects, including a doctor project with a basic user interface. Creating my first responsive project was an enjoyable experience. Following that, I began utilizing pre-built libraries such as Bootstrap and Material-UI, among others. ',
-            'Collaboration with Designers and FrontEnd Developers: At Cosmos Digital, I collaborated with some of my colleagues to create projects such as a portfolio. This experience was highly educational, and I learned a great deal from it.'
-        ]
-    },
-
-    {
-        title : 'BackEnd-End Development',
-        date : 'March 2024',
-        responsibilities: [
-            'Server-Side Programming: I started my journey into back-end development by learning server-side programming languages such as Node.js and express. This allowed me to create robust and efficient server applications.',
-            'Database Management: I gained experience in working with databases like MongoDB and MySQL, focusing on designing and optimizing database schemas, writing complex queries, and ensuring data integrity and security.',
-            'Collaboration with Cross-Functional Teams: At Cosmos Digital, I collaborated closely with front-end developers and designers to integrate user interfaces with back-end services. This teamwork enhanced my understanding of full-stack development and improved my ability to deliver cohesive and well-rounded projects.'
-        ]
-    },
-
-    {
-        title : 'DataBase',
-        date : 'May 2024',
-        responsibilities: [
-            'Database Management Systems (DBMS): I worked with various DBMS platforms such as MySQL, PostgreSQL, and MongoDB. This experience helped me understand the strengths and weaknesses of different systems and how to choose the right one based on project requirements.',
-            'Query Optimization: I learned to write and optimize complex SQL queries to retrieve and manipulate data efficiently. This included understanding query execution plans, indexing strategies, and performance tuning to ensure fast and reliable database operations.',
-            'Collaboration with Development Teams: At Cosmos Digital, I collaborated with both front-end and back-end developers to ensure seamless integration of databases with applications. '
-        ]
-    },
-
-]
+  {
+    title: "Software Developer Intern",
+    company: "Asmawebs Pvt. Ltd.",
+    date: "Jan 2026 – Present",
+    responsibilities: [
+      "Built a production multi-tenant Institute Management System with isolated data per institute.",
+      "Implemented RBAC with dynamic menus driven by role/institute access tables; frontend ProtectedRoute guards URLs and backend enforces scope on all resources.",
+      "Built role-based analytics dashboards with live charts (Recharts) for fee collection, enrollment, and attendance; implemented PDF (pdfmake) and Excel (ExcelJS) exports from the UI.",
+      "Designed secure REST APIs with JWT authentication, bcrypt password hashing, Multer file uploads, and optimized Mongoose queries on MongoDB Atlas.",
+    ],
+  },
+  {
+    title: "MERN Stack Trainer",
+    company: "Freelance",
+    date: "Jan 2025 – Jun 2025",
+    responsibilities: [
+      "Trained 150+ students in full-stack MERN development through hands-on, project-based curriculum.",
+      "Conducted weekly code reviews and debugging sessions; guided students in building and deploying real-world applications.",
+    ],
+  },
+];
 
 export const PROJECTS = [
-    {   id : 1,
-        title : 'Employee Management System',
-        icon : './assets/img/ems.webp',
-        link : 'https://emsfrontend-phi.vercel.app/'
-       
-    },
-    {   id : 2,
-        title: 'Movie App',
-        icon : './assets/img/movie.webp',
-         link : 'https://github.com/akshaywadhi/movieapp.git'
- 
-    },
-   
-    {    id : 3,
-        title : 'Weather App',
-        icon : './assets/img/weatherapp.jpg',
-    },
-    {
-        id : 4,
-        title : 'To-Do App',
-        icon : './assets/img/to-do.webp',
-     
-    }
-]
+  {
+    id: 1,
+    title: "Institute Management System",
+    description:
+      "Production multi-tenant SaaS for schools and colleges — admission, fees, payroll, attendance, and role-based analytics with live exports.",
+    tech: ["React", "Node.js", "MongoDB", "JWT", "Mantine", "Recharts"],
+    icon: "./assets/img/ems.webp",
+    link: null,
+    featured: true,
+    highlights: ["Multi-tenancy", "RBAC", "PDF/Excel exports", "Live dashboards"],
+  },
+  {
+    id: 2,
+    title: "Portfolio Website",
+    description:
+      "High-performance developer portfolio with bento layout, scroll-driven UI, and optimized React architecture.",
+    tech: ["React", "Vite", "CSS", "Web3Forms"],
+    icon: "./assets/img/hero-akshay.webp",
+    link: "https://akshaywadhi.in/",
+    featured: false,
+    highlights: ["Responsive", "Accessible", "Fast load"],
+  },
+];
+
+export const EDUCATION = [
+  {
+    institution: "Cosmos Digital",
+    location: "Wardha, Maharashtra",
+    degree: "MERN Stack Development Certification",
+    date: "Oct 2023 – Aug 2024",
+  },
+  {
+    institution: "RTMNU Nagpur",
+    location: "Maharashtra",
+    degree: "Bachelor of Commerce and Computer Application",
+    date: "Aug 2019 – Aug 2022",
+  },
+];

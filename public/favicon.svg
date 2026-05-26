@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1a1035"/>
+      <stop offset="1" stop-color="#050510"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="12" y1="52" x2="52" y2="12" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a993fe"/>
+      <stop offset="1" stop-color="#8750f7"/>
+    </linearGradient>
+    <linearGradient id="text" x1="16" y1="48" x2="48" y2="16" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f0ebff"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" stroke="url(#accent)" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="800" letter-spacing="-1" fill="url(#text)">AK</text>
+</svg>

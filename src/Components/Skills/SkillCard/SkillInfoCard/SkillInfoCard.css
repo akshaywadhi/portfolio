@@ -1,68 +1,51 @@
-.skills-info-card{
-    min-height: 23rem;
-    border-radius: 0.65rem;
-    border: 1.5px solid #6751b9;
-    background: rgba(22,17,47,0.398);
-    backdrop-filter: blur(1rem);
-    transition: all 0.3s ease;
+.skills-info-card {
+  min-height: 18rem;
+  overflow: hidden;
 }
 
-
-.skills-info-card:hover{
-    transform:scale(1.05);
-}
-.skills-info-card h6{
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 0.8rem 2rem;
-    background: linear-gradient(100deg, #ac96ff 0%, #7c5fe6 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-bottom: 1.5px solid #6751b9;
+.skills-info-card h6 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--accent-light);
 }
 
-.skills-info-content{
-    padding: 2rem;
+.skills-info-content {
+  padding: 1.25rem 1.5rem 1.5rem;
 }
 
-.skill-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.skill-row {
+  margin-bottom: 0.25rem;
 }
 
-.skill-info .percentage{
-    color: #dd8cfa;
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
 }
 
-.skill-progress-bg{
-    width: 100%;
-    height: 0.5rem;
-    background: #382e68;
-    border-radius: 0.5rem;
-    margin: 1rem 0;
-    overflow: hidden;
+.skill-info p {
+  font-size: 0.88rem;
+}
+
+.skill-info .percentage {
+  color: var(--accent-light);
+  font-weight: 500;
+  font-size: 0.82rem;
+}
+
+.skill-progress-bg {
+  height: 0.35rem;
+  background: rgba(56, 46, 104, 0.5);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 0.85rem;
 }
 
 .skill-progress {
-    width: 0%;
-    height: 0.5rem;
-    background: linear-gradient(90deg, #aa94fe -50%, #7d60e6 50%);
-    border-radius: 0.5rem;
-    transition: all 0.5s ease-in-out;
-}
-
-@media (max-width: 1025px){
-    .skills-info-card h6{
-        font-size: 1.1rem;
-    }
-
-    .skill-info p{
-        font-size: 0.9rem;
-    }
-
-    .skills-info-content {
-        padding: 1.5rem;
-    }
+  height: 100%;
+  background: var(--gradient);
+  border-radius: 1rem;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -1,28 +1,37 @@
-import React, { useEffect } from 'react'
-import './Projects.css'
-import { PROJECTS } from '../../utils/data'
-import ProjectCard from './ProjectCard/ProjectCard'
-import "aos/dist/aos.css";
-import Aos from 'aos';
+import "./Projects.css";
+import { PROJECTS } from "../../utils/data";
+import ProjectCard from "./ProjectCard/ProjectCard";
+import Reveal from "../common/Reveal";
+import SectionHeader from "../common/SectionHeader";
 
-export default function Projects({section}) {
-  useEffect(()=> {
-    Aos.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-    });
-    Aos.refresh();
-  },[])
+export default function Projects({ section }) {
+  const featured = PROJECTS.find((p) => p.featured);
+  const others = PROJECTS.filter((p) => !p.featured);
+
   return (
-    <section className='project-container' ref={section} data-aos='fade-up'>
-        <h5>Projects</h5>
-        <div className='project-content'>
-{
-    PROJECTS.map((item,index) => (
-        <ProjectCard key={item.id}  id={item.id} icon={item.icon} title={item.title} link={item.link} />
-    ))
-}
+    <section className="projects-section section-block" ref={section} id="projects">
+      <Reveal>
+        <SectionHeader
+          label="Work"
+          title="Featured projects"
+          subtitle="Production-grade systems with real architecture — not just tutorials."
+        />
+      </Reveal>
+
+      <div className="projects-bento">
+        {featured && (
+          <Reveal>
+            <ProjectCard {...featured} size="large" />
+          </Reveal>
+        )}
+        <div className="projects-secondary">
+          {others.map((item, i) => (
+            <Reveal key={item.id} delay={i * 80}>
+              <ProjectCard {...item} size="medium" />
+            </Reveal>
+          ))}
         </div>
+      </div>
     </section>
-  )
+  );
 }

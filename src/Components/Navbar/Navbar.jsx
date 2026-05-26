@@ -1,72 +1,79 @@
-import React, { useState } from 'react'
-import './Navbar.css'
-import MobileNav from '../MobileNav/MobileNav';
-import { scrollToSection } from '../Scroll';
+import { useState } from "react";
+import "./Navbar.css";
+import MobileNav from "../MobileNav/MobileNav";
+import { PROFILE, NAV_ITEMS } from "../../utils/data";
+import { useScrollSpy } from "../../hooks/useScrollSpy";
 
-export default function Navbar({sectionRefs}) {
+export default function Navbar({ sectionRefs, scrollToSection }) {
+  const [openMenu, setOpenMenu] = useState(false);
+  const activeId = useScrollSpy(sectionRefs);
 
-    const [openMenu, setOpenMenu] = useState(false);
-
-    const toggleMenu = () => {
-        setOpenMenu(!openMenu)
-    };
-
-
-
-
-  
-
-
-const scrollToSection = (ref) => {
-    // ref.current.scrollIntoView({ behavior: 'smooth' });
-
-
-
-    const yOffset = -250; // Adjust this value as needed to fit your layout
-    const y = ref.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({top: y, behavior: 'smooth'});
+  const handleNavClick = (key) => {
+    scrollToSection(sectionRefs[key]);
+    setOpenMenu(false);
   };
-  
-    return (
-        <>
-        <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} sectionRefs={sectionRefs} scrollToSection={scrollToSection} />
-        
 
-            
-            <nav className='nav-wrapper'>
-                <div className='nav-content'>
-                    <div className='logo-email'>
-                    <img className='logo' src='./me.png'/>
-                    </div>
-                    <ul>
-                        <li onClick={() => scrollToSection(sectionRefs.section4)}>
-                            <a className='menu-item'>Home</a>
-                        </li>
-                        <li onClick={() => scrollToSection(sectionRefs.section1)} >
-                            <a className='menu-item'>Skills</a>
-                        </li>
-                        <li onClick={() => scrollToSection(sectionRefs.section5)}>
-                            <a className='menu-item'>Projects</a>
-                        </li>
-                        <li onClick={() => scrollToSection(sectionRefs.section2)}>
-                            <a className='menu-item'>Work Experience</a>
-                        </li>
-                        <li onClick={() => scrollToSection(sectionRefs.section3)}>
-                            <a className='menu-item' >Contact Me</a>
-                        </li>
-                        <a className='contact-btn' href='https://github.com/akshaywadhi/test/raw/main/AkshayWadhi.pdf' onClick={() => { }} download='akshaywadhi.pdf'>Download CV</a>
-                    </ul>
-                    <button className='menu-btn' onClick={toggleMenu}>
-                        <span className={'material-symbols-outlined'}
-                            style={{ fontSize: '1.8rem' }}>
-                            {openMenu ? 'close' : 'menu'}
-                        </span>
+  return (
+    <>
+      <MobileNav
+        isOpen={openMenu}
+        toggleMenu={() => setOpenMenu((p) => !p)}
+        sectionRefs={sectionRefs}
+        scrollToSection={scrollToSection}
+        navItems={NAV_ITEMS}
+        activeId={activeId}
+      />
 
-                    </button>
-                </div>
-            </nav>
+      <nav className="nav-wrapper">
+        <div className="nav-content">
+          <button
+            type="button"
+            className="logo-email"
+            onClick={() => handleNavClick("section4")}
+            aria-label="Go to home"
+          >
+            <img className="logo" src={PROFILE.avatar} alt="" width={44} height={44} />
+            <span className="logo-name">{PROFILE.name.split(" ")[0]}</span>
+          </button>
 
-        
-                    </>
-    )
+          <ul className="nav-links">
+            {NAV_ITEMS.map(({ label, key }) => (
+              <li key={key}>
+                <button
+                  type="button"
+                  className={`menu-item ${activeId === key ? "menu-item--active" : ""}`}
+                  onClick={() => handleNavClick(key)}
+                >
+                  {label}
+                </button>
+              </li>
+            ))}
+            <li>
+              <a
+                className="contact-btn"
+                href={PROFILE.cvUrl}
+                download="AkshayWadhi.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Resume
+              </a>
+            </li>
+          </ul>
+
+          <button
+            type="button"
+            className="menu-btn"
+            onClick={() => setOpenMenu((p) => !p)}
+            aria-label={openMenu ? "Close menu" : "Open menu"}
+            aria-expanded={openMenu}
+          >
+            <span className="material-symbols-outlined">
+              {openMenu ? "close" : "menu"}
+            </span>
+          </button>
+        </div>
+      </nav>
+    </>
+  );
 }

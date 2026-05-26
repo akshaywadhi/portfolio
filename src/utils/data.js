@@ -13,13 +13,12 @@ export const PROFILE = {
     "Full Stack Developer with hands-on experience building secure, scalable multi-tenant web applications, REST APIs, and role-based authentication systems. Developed a production-level Institute Management SaaS with multi-tenancy, RBAC, and analytics dashboards. Trained 150+ students in MERN stack development.",
   typewriterRoles: [
     "Full Stack Developer",
-    "MERN Stack Developer",
     "SaaS Builder",
   ],
   availability: "Open to opportunities",
   heroImage: "./assets/img/hero-akshay.webp",
   avatar: "./assets/img/hero-akshay.webp",
-  initials: "AK",
+  initials: "",
 };
 
 export const STATS = [

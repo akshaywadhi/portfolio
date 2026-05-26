@@ -33,7 +33,7 @@ export default function Navbar({ sectionRefs, scrollToSection }) {
             aria-label="Go to home"
           >
             <img className="logo" src={PROFILE.avatar} alt="" width={44} height={44} />
-            <span className="logo-name">{PROFILE.name.split(" ")[0]}</span>
+          
           </button>
 
           <ul className="nav-links">

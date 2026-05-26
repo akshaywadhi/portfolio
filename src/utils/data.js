@@ -17,7 +17,7 @@ export const PROFILE = {
   ],
   availability: "Open to opportunities",
   heroImage: "./assets/img/hero-akshay.webp",
-  avatar: "./assets/img/hero-akshay.webp",
+  avatar: "./assets/img/initial.webp",
   initials: "",
 };
 

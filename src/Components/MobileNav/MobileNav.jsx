@@ -24,8 +24,8 @@ export default function MobileNav({
     >
       <div className="mobile-menu-container" onClick={(e) => e.stopPropagation()}>
         <div className="mobile-header">
-          <img className="logo" src={PROFILE.avatar} alt="" width={40} height={40} />
-          <span>{PROFILE.name}</span>
+          <img className="logo" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/terminal.webp" alt="" width={40} height={40} />
+          <span>akshay@portfolio:~$</span>
         </div>
 
         <ul className="mobile-nav-list">

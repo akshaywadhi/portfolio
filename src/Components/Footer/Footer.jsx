@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <p className="footer-copy">
-        © {new Date().getFullYear()} {PROFILE.name}. Built with React & Vite.
+        © {new Date().getFullYear()} {PROFILE.name}
       </p>
       <ul className="footer-social">
         {socialLinks.map(({ icon, href, label }) => (
